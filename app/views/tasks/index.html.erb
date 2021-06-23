@@ -1,3 +1,7 @@
+<p>ログイン中のユーザ: <%= current_user.name %></p>
+
+<%= link_to 'Logout', logout_path, method: :delete %>
+
 <h1>タスク一覧</h1>
 
 <ul>
