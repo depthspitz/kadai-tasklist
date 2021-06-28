@@ -1,13 +1,5 @@
 <%= form_with(model: task) do |f| %>
-  <% if task.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-        <% task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= render 'layouts/error_messages', model: f.object %>
   
   <%= f.label :status, 'ステータス' %>
   <%= f.text_field :status %>
